@@ -1,0 +1,25 @@
+<!-- controllerName = Aonde o controller está localizado 
+    xmlns = Biblioteca de controles de XML no SAP
+    xmlns:mvc = Biblioteca SAP
+Dentro da view é possivel adicionar caracteristicas 
+como button/table/text e todos os elementos localizados na biblioteca xmlns-->
+<!-- A propriedade i18n>showHelloButtonText serve para determinar
+da onde estará vindo o texto (usado para internacionalização/tradução) -->
+<mvc:View
+	controllerName="sap.ui.demo/walkthrough.controller.App"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true"
+>
+	<Shell>
+		<App class="myAppDemoWT">
+			<pages>
+				<Page title="{i18n>homePageTitle}">
+					<content>
+						<mvc:XMLView viewName="sap.ui.demo.walkthrough.view.HelloPanel"/>
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>

@@ -25,6 +25,7 @@ sap.ui.define(
           Fragment.load({
             id: oView.getId(),
             name: "sap.ui.demo.walkthrough.view.HelloDialog",
+            controller: this,
           }).then(function (oDialog) {
             // Connectar dialog para o root view do component (models, lifecycle)
             oView.addDependent(oDialog);
@@ -33,6 +34,9 @@ sap.ui.define(
         } else {
           this.byId("helloDialog").open();
         }
+      },
+      onCloseDialog: function () {
+        this.byId("helloDialog").close();
       },
     });
   }
